@@ -1,0 +1,5 @@
+<odoo>
+    <record id="account_accountant.menu_accounting" model="ir.ui.menu">
+        <field name="groups" ref="[(4, ref('eurosense.group_account_allowed'), 0)]"/>
+    </record>
+</odoo>
