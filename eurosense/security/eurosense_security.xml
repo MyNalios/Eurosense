@@ -8,7 +8,7 @@
     <record id="account_move_allowed_rule" model="ir.rule">
         <field name="name">Allowed user access</field>
         <field ref="account.model_account_move" name="model_id"/>
-        <field name="domain_force">[('partner_id','in',user.allowed_contact_ids)]</field>
+        <field name="domain_force">[('partner_id','in',user.allowed_contact_ids.ids)]</field>
         <field name="groups" eval="[(4, ref('group_account_allowed'))]"/>
     </record>
 </odoo>
