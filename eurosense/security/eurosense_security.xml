@@ -1,6 +1,6 @@
 <odoo>
 
-    <record id="eurosense.group_account_allowed" model="res.groups">
+    <record id="group_account_allowed" model="res.groups">
         <field name="name">Allowed in contact</field>
         <field name="category_id" ref="base.module_category_accounting_accounting"/>
     </record>
@@ -9,6 +9,6 @@
         <field name="name">Allowed user access</field>
         <field ref="account.model_account_move" name="model_id"/>
         <field name="domain_force">[('partner_id.allowed_users','in',[user.id])]</field>
-        <field name="groups" eval="[(4, ref('eurosense.group_account_allowed'))]"/>
+        <field name="groups" eval="[(4, ref('group_account_allowed'))]"/>
     </record>
 </odoo>
