@@ -7,7 +7,7 @@
 
     <record id="account_move_allowed_rule" model="ir.rule">
         <field name="name">Allowed user access</field>
-        <field ref="model_account_move" name="model_id"/>
+        <field ref="account.model_account_move" name="model_id"/>
         <field name="domain_force">[('partner_id.allowed_users','in',[user.id])]</field>
         <field name="groups" eval="[(4, ref('eurosense.group_account_allowed'))]"/>
     </record>
