@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_account_move_allowed,account_move allowed,account.model_account_move,eurosense.group_account_allowed,1,0,0,0
 access_account_move_line_allowed,account_move_line allowed,account.model_account_move_line,eurosense.group_account_allowed,1,0,0,0
+access_account_journal_allowed,account.journal allowed order.user,account.model_account_journal,eurosense.group_account_allowed,1,0,0,0
