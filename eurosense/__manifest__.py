@@ -16,7 +16,7 @@
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'ERP',
-    'version': '14.0.0.19',
+    'version': '14.0.0.20',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'account_accountant', 'contacts'],
@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/partner.xml',
         'views/user.xml',
+        'views/move.xml',
         'views/menus.xml',
     ],
     'installable': True,
