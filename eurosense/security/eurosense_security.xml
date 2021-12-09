@@ -12,7 +12,7 @@
         <field name="groups" eval="[(4, ref('group_account_allowed'))]"/>
     </record>
 
-    <record id="account.account_invoice_rule_see_all" model="ir.rule">
+    <record id="sale.account_invoice_rule_see_all" model="ir.rule">
         <field name="domain_force">[('move_type', 'in', ('out_invoice', 'out_refund'))]</field>
     </record>
 
