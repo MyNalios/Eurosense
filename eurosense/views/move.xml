@@ -1,0 +1,39 @@
+<odoo>
+    <record id="eurosense_move_line_form" model="ir.ui.view">
+        <field name="name">eurosense.move.line.form.inherit</field>
+        <field name="model">account.move.line</field>
+        <field eval="8" name="priority"/>
+        <field name="inherit_id" ref="account.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <field name="account_id" position="attributes">
+                <attribute name="groups">eurosense.group_account_allowed</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="eurosense_move_line_grouped_form" model="ir.ui.view">
+        <field name="name">eurosense.move.line.grouped.form.inherit</field>
+        <field name="model">account.move.line</field>
+        <field eval="8" name="priority"/>
+        <field name="inherit_id" ref="account.view_move_line_tree_grouped"/>
+        <field name="arch" type="xml">
+            <field name="account_id" position="attributes">
+                <attribute name="groups">eurosense.group_account_allowed</attribute>
+            </field>
+        </field>
+    </record>
+
+
+
+    <record id="eurosense_move_form" model="ir.ui.view">
+        <field name="name">eurosense.move.form.inherit</field>
+        <field name="model">account.move</field>
+        <field eval="8" name="priority"/>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="account_id" position="attributes">
+                <attribute name="groups">eurosense.group_account_allowed</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
