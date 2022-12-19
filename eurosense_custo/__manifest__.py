@@ -12,9 +12,14 @@
 
     'category': 'customization',
 
-    'depends': ['base'],
+    'depends': ['base', 'hr', 'hr_timesheet'],
 
-    'data': [],
+    'data': [
+        'security/groups.xml',
+        'security/record_rules.xml',
+
+        'views/hr_employee_views.xml',
+    ],
 
     'license': 'LGPL-3',
 }
