@@ -14,4 +14,10 @@
 
     <menuitem groups="eurosense_custo.group_allowed_employee_timesheet" id="timesheet_menu_allowed_timesheets" name="My Allowed Timesheets" parent="hr_timesheet.menu_hr_time_tracking" action="act_hr_timesheet_allowed_timesheets"/>
 
+    <menuitem id="hr_timesheet.timesheet_menu_root"
+            name="Timesheets"
+            sequence="55"
+            groups="hr_timesheet.group_hr_timesheet_user,eurosense_custo.group_allowed_employee_timesheet"
+            web_icon="hr_timesheet,static/description/icon_timesheet.png"/>
+
 </odoo>
