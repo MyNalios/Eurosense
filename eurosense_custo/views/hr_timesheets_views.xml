@@ -9,7 +9,7 @@
         <field name="context">{
             "search_default_week":1,
         }</field>
-        <field name="search_view_id" ref="hr_timesheet_line_my_timesheet_search"/>
+        <field name="search_view_id" ref="hr_timesheet.hr_timesheet_line_my_timesheet_search"/>
     </record>
 
     <menuitem groups="eurosense_custo.group_allowed_employee_timesheet" id="timesheet_menu_allowed_timesheets" name="My Allowed Timesheets" parent="hr_timesheet.menu_hr_time_tracking" action="act_hr_timesheet_allowed_timesheets"/>
