@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="hr_timesheet.hr_employee_view_form_inherit_timesheet"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='timesheet_cost']/.." position="after">
-                <field name="allowed_timesheets_user_ids" />
+                <field name="allowed_timesheets_user_ids" widget="many2many_tags"/>
             </xpath>
         </field>
     </record>
