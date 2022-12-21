@@ -19,6 +19,7 @@
         'security/record_rules.xml',
 
         'views/hr_employee_views.xml',
+        'views/hr_timesheets_views.xml',
     ],
 
     'license': 'LGPL-3',
