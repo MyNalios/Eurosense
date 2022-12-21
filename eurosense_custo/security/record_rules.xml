@@ -10,8 +10,8 @@
             <field name="perm_create" eval="True" /> 
             <field name="perm_unlink" eval="True" /> 
             <field name="domain_force">[
-                ('employee_id', '=', user.employee_id.id),
-                ('employee_id', 'in', user.employee_id.allowed_timesheets_user_ids.employee_id.ids)
+                '|', ('employee_id', '=', user.employee_id.id),
+                     ('employee_id', 'in', user.employee_id.allowed_timesheets_user_ids.employee_id.ids)
             ]</field> 
         </record>
     </data>
