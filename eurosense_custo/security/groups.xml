@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="group_allowed_employee_timesheet" model="res.groups">
+            <field name="name">Allowed employee timesheet</field>
+            <field name="category_id" ref="base.module_category_services_timesheets"/>
+            <field name="implied_ids" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]"/>
+        </record>
+
+        <record id="hr_timesheet.group_hr_timesheet_approver" model="res.groups">
+            <field name="name">User: all timesheets</field>
+            <field name="category_id" ref="base.module_category_services_timesheets"/>
+            <field name="implied_ids" eval="[(4, ref('eurosense_custo.group_allowed_employee_timesheet'))]"/>
+        </record>
+    </data>
+</odoo>

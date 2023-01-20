@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="act_hr_timesheet_allowed_timesheets" model="ir.actions.act_window">
+        <field name="name">My Allowed Timesheets</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[]</field>
+        <field name="context">{
+            "search_default_week":1,
+        }</field>
+        <field name="search_view_id" ref="hr_timesheet.hr_timesheet_line_my_timesheet_search"/>
+    </record>
+
+    <menuitem groups="eurosense_custo.group_allowed_employee_timesheet" id="timesheet_menu_allowed_timesheets" name="My Allowed Timesheets" parent="hr_timesheet.menu_hr_time_tracking" action="act_hr_timesheet_allowed_timesheets"/>
+
+    <menuitem id="hr_timesheet.timesheet_menu_root"
+            name="Timesheets"
+            sequence="55"
+            groups="hr_timesheet.group_hr_timesheet_user,eurosense_custo.group_allowed_employee_timesheet"
+            web_icon="hr_timesheet,static/description/icon_timesheet.png"/>
+
+</odoo>
