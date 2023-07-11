@@ -12,7 +12,7 @@
 
     'category': 'customization',
 
-    'depends': ['base', 'hr', 'hr_timesheet'],
+    'depends': ['base', 'hr', 'hr_timesheet', 'hr_recruitment'],
 
     'data': [
         'security/groups.xml',
