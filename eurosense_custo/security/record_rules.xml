@@ -25,5 +25,16 @@
             <field name="perm_unlink" eval="True"/>
             <field name="domain_force">[('allowed_recruiter_ids', 'in', user.id)]</field>
         </record>
+
+        <record id="hr_recruitment_group_office_allow_all" model="ir.rule">
+            <field name="name">Recruitment: Office allow 1=1</field>
+            <field name="model_id" ref="hr.model_hr_job"/>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
     </data>
 </odoo>
