@@ -20,7 +20,7 @@
         </record>
 
         <record id="hr_recruitment.group_hr_recruitment_user" model="res.groups">
-            <field name="implied_ids" eval="[(6, 0, [ref('eurosense_custo.hr_recruitment_group_allowed_jobs)])]"/>
+            <field name="implied_ids" eval="[(6, 0, [ref('eurosense_custo.hr_recruitment_group_allowed_jobs')])]"/>
         </record>
     </data>
 </odoo>
