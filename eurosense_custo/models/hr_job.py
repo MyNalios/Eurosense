@@ -12,9 +12,8 @@ class HrJob(models.Model):
 class HrApplicant(models.Model):
     _inherit = 'hr.applicant'
 
-    allowed_recruiter_ids = fields.Many2many('res.users', compute='_compute_allowed_recruiter_ids', store=True)
+    allowed_recruiter_ids = fields.Many2many('res.users', compute='_compute_allowed_recruiter_ids')
 
-    @api.depends('job_id')
     def _compute_allowed_recruiter_ids(self):
         for rec in self:
             if rec.job_id.allowed_recruiter_ids:
