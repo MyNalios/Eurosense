@@ -45,7 +45,7 @@
             <field name="perm_read" eval="True"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="domain_force">[('allowed_recruiter_ids', 'in', user.id)]</field>
+            <field name="domain_force">[('job_id.allowed_recruiter_ids', 'in', user.id)]</field>
         </record>
 
         <record id="hr_recruitment_application_group_office_allow_all" model="ir.rule">
