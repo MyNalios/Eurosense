@@ -4,8 +4,9 @@
         <field name="model">hr.job</field>
         <field name="priority">98</field>
         <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="groups_id" ref="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
         <field name="arch" type="xml">
-            <xpath expr="//group[@name='recruitment']/field[@name='department_id']" position="after">
+            <xpath expr="//group/field[@name='user_id']" position="after">
                 <field name="allowed_recruiter_ids" widget="many2many_tags"/>
             </xpath>
         </field>
@@ -17,4 +18,7 @@
         web_icon="hr_recruitment,static/description/icon.png"
         groups="eurosense_custo.hr_recruitment_group_allowed_jobs"
         sequence="80"/>
+
+    <menuitem id="hr_recruitment.menu_hr_recruitment_configuration" name="Configuration" parent="hr_recruitment.menu_hr_recruitment_root"
+        sequence="100" groups="hr_recruitment.group_hr_recruitment_user"/>
 </odoo>
