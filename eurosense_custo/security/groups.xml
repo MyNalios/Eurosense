@@ -16,11 +16,10 @@
         <record id="hr_recruitment_group_allowed_jobs" model="res.groups">
             <field name="name">Allowed Jobs only</field>
             <field name="category_id" ref="base.module_category_human_resources_recruitment"/>
-            <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
         </record>
 
         <record id="hr_recruitment.group_hr_recruitment_user" model="res.groups">
-            <field name="implied_ids" eval="[(6, 0, [ref('eurosense_custo.hr_recruitment_group_allowed_jobs')])]"/>
+            <field name="implied_ids" eval="[(4, ref('eurosense_custo.hr_recruitment_group_allowed_jobs'))]"/>
         </record>
     </data>
 </odoo>
