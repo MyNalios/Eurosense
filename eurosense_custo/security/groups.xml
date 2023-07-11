@@ -18,8 +18,18 @@
             <field name="category_id" ref="base.module_category_human_resources_recruitment"/>
         </record>
 
+        <function model="ir.model.data" name="toggle_noupdate">
+            <value>res.groups</value>
+            <value eval="ref('hr_recruitment.group_hr_recruitment_user')" />
+        </function>
+
         <record id="hr_recruitment.group_hr_recruitment_user" model="res.groups">
-            <field name="implied_ids" eval="[(4, ref('eurosense_custo.hr_recruitment_group_allowed_jobs'))]"/>
+            <field name="implied_ids" eval="[(6, 0, [ref('eurosense_custo.hr_recruitment_group_allowed_jobs'), ref('hr.group_hr_user')])]"/>
         </record>
+
+        <function model="ir.model.data" name="toggle_noupdate">
+            <value>res.groups</value>
+            <value eval="ref('hr_recruitment.group_hr_recruitment_user')" />
+        </function>
     </data>
 </odoo>
